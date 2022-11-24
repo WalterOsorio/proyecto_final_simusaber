@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from apps.profiles.form import *
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
+from apps.profiles.models import *
 
 
 def user_validate_group(roles=[]):
@@ -50,3 +51,11 @@ def logout_user(request):
 # @user_validate_group(roles=['Administrator', 'Authorizer'])
 def home_view(request):
     return render(request, "general/home.html")
+
+@login_required(login_url='/profiles/login')
+def read_tipoDocumento_view(request):
+    tipoDocumentos=TipoDocumento.objects.all()
+    context={
+                'tipoDocumentos':tipoDocumentos,
+            }
+    return render(request, "profiles/readTipoDocumento.html",context)

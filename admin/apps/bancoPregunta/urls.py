@@ -1,9 +1,9 @@
 from django.urls import path
-# from apps.locations.views import *
+from apps.bancoPregunta.views import *
 # from apps.locations.apiViews import *
 
 urlpatterns = [
-    # path('readCountry/', read_country_view, name='readCountry'),
+    path('readResultados/', read_resultado_view, name='readResultados'),
     # path('readDepartament/', read_departament_view, name='readDepartament'),
     # path('readCity/', read_city_view, name='readCity'),
     # path('readOffice/', read_office_view, name='readOffice'),
