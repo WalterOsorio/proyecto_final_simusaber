@@ -73,13 +73,11 @@
               </div>
             </div>
             <div class="row mt-2 mb-3 justify-content-center">
-              <a class="text-Cprimary" data-toggle="modal" data-target="#reset_password_modal" href="#">¿Olvidaste Tu Contraseña?</a>
+              <a class="text-Csecondary" data-toggle="modal" data-target="#reset_password_modal" href="#">¿Olvidaste Tu Contraseña?</a>
             </div>
             {% for err in form.non_field_errors %}
-            <div class="row border-Cprimary text-center">              
-              <div class="col-12 pt-2">
-                <p>{{err}}</p>
-              </div>
+            <div class='row mx-0 alert-danger'>
+              {{err}}
             </div>
             {% endfor %}
           </form>        

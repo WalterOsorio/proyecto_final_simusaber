@@ -1,7 +1,8 @@
+{% load staticfiles %}
 <nav class="row container-fluid navbar navbar-expand-lg  bg-Cgraylight py-0 bg-dark">
   <div class="text-white ml-2 ml-md-5 col-7 col-md-2">
     <a class="ml-md-5" href="">
-      {% comment %} <img src="{% static 'images/logo_sapo.png' %}"  class="h-50 w-50"> {% endcomment %}
+      <img src="{% static 'images/logo_simusaber.png' %}"  class="h-50 w-50"> 
     </a>
   </div>
   <button class="navbar-toggler mr-5" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,8 +21,6 @@
             </i>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            {% comment %} <a class="dropdown-item " href="{% url 'profiles:readCustomer'%}">Clientes</a> {% endcomment %}
-            {% comment %} <a class="dropdown-item " href="{% url 'profiles:readFuncionary'%}">Funcionarios</a> {% endcomment %}
           </div>
         </div>
       </li>
@@ -36,6 +35,8 @@
             </i>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item " href="{% url 'prueba:readMateria'%}">Materias</a> 
+            <a class="dropdown-item " href="{% url 'prueba:readGrado'%}">Grados</a> 
           </div>
         </div>
       </li>
@@ -64,6 +65,7 @@
             </i>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item " href="{% url 'profiles:readTipoDocumento'%}">Tipos de Documentos</a> 
           </div>
         </div>
       </li>
@@ -77,7 +79,8 @@
               </div>
             </i>
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <a class="dropdown-item " href="{% url 'states:readStates'%}">Estados</a> 
           </div>
         </div>
       </li>
@@ -92,6 +95,7 @@
             </i>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item " href="{% url 'bancoPregunta:readResultados'%}">Resultados</a> 
           </div>
         </div>
       </li>
@@ -106,7 +110,7 @@
                 <i class="fa fa-user-circle-o fa-3x text-Ctertiary">
                   <div class="h6 m-0">
                     <h6 >{{user.get_full_name}}</h6>
-                    {% comment %} <h6 >({{user.groups.all.0.name}})</h6> {% endcomment %}
+                    <h6 >({{user.groups.all.0.name}})</h6>
                   </div>
                 </i>
               </a>

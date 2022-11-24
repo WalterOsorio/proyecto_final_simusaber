@@ -23,5 +23,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('profiles/', include(('apps.profiles.urls', 'profiles'), namespace="profiles")),
-    # path('locations/', include(('apps.locations.urls', 'locations'), namespace="locations")),
+    path('states/', include(('apps.states.urls', 'states'), namespace="states")),
+    path('prueba/', include(('apps.prueba.urls', 'locations'), namespace="prueba")),
+    path('bancoPregunta/', include(('apps.bancoPregunta.urls', 'locations'), namespace="bancoPregunta")),
 ]

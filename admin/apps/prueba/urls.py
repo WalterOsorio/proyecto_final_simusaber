@@ -1,9 +1,10 @@
 from django.urls import path
-# from apps.locations.views import *
+from apps.prueba.views import *
 # from apps.locations.apiViews import *
 
 urlpatterns = [
-    # path('readCountry/', read_country_view, name='readCountry'),
+    path('readMateria/', read_materia_view, name='readMateria'),
+    path('readGrado/', read_grado_view, name='readGrado'),
     # path('readDepartament/', read_departament_view, name='readDepartament'),
     # path('readCity/', read_city_view, name='readCity'),
     # path('readOffice/', read_office_view, name='readOffice'),
