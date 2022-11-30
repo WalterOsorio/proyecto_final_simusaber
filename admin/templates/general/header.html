@@ -2,9 +2,7 @@
 <nav class="row container-fluid navbar navbar-expand-lg  bg-Cgraylight py-0 bg-dark">
   <div class="text-white ml-2 ml-md-5 col-7 col-md-2">
     <a class="ml-md-5" href="">
-      <a href="http://127.0.0.1:8000/profiles/home/">
-        <img src="{% static 'images/logo_simusaber.png' %}"  class="h-50 w-50">
-      </a> 
+      <img src="{% static 'images/logo_simusaber.png' %}"  class="h-50 w-50"> 
     </a>
   </div>
   <button class="navbar-toggler mr-5" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,15 +12,16 @@
     <ul class="navbar-nav text-md-center  text-left flex-grow-1 d-flex justify-content-md-center">
       <li class="nav-item text-center mx-2 nav-item dropdown">
         <div class="nav-link">
-          <a class=role="button">
-            <a href="http://127.0.0.1:8000/profiles/home/"> 
-              <i class="fa fa-home fa-3x text-Csecondary">
-                <div class="h6 m-0">
-                  <h5>Inicio</h5>
-                </div>
-              </i>
-            <a/>
+          <a class="dropdown-toggle text-Cprimary " href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-home fa-3x text-Csecondary">
+              <div class="h6 m-0">
+                <h5>Inicio</h5>
+              </div>
+            </i>
           </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          </div>
         </div>
       </li>
       <li class="nav-item text-center mx-2 nav-item dropdown">
@@ -67,6 +66,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item " href="{% url 'profiles:readTipoDocumento'%}">Tipos de Documentos</a> 
+            <a class="dropdown-item " href="{% url 'profiles:readEstudiante'%}">Estudiantes</a> 
           </div>
         </div>
       </li>

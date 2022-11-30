@@ -37,13 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.states',
-    'apps.locations',
+    'corsheaders',
+    'rest_framework',
+    'rest_framework.authtoken',
     'apps.profiles',
-    'apps.bancoPregunta',
+    'apps.states',
     'apps.prueba',
-    'static',
-    'templates',
+    'apps.bancoPregunta',
 ]
 
 MIDDLEWARE = [
@@ -110,9 +110,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-co'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Bogota'
 
 USE_I18N = True
 
@@ -128,3 +128,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+SITE_ID=1
+
+VERSION_STATIC='V1'
