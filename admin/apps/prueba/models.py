@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import *
-from apps.bancoPregunta.models import BancoPregunta
-from apps.states.models import Estado
+from apps.bancoPregunta.models import *
+from apps.states.models import *
 
 class Materia(models.Model):
     

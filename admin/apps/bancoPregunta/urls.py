@@ -1,9 +1,11 @@
 from django.urls import path
 from apps.bancoPregunta.views import *
 # from apps.locations.apiViews import *
+from apps.bancoPregunta.views import *
 
 urlpatterns = [
     path('readResultados/', read_resultado_view, name='readResultados'),
+    path('createPregunta/', create_pregunta_view, name='createPregunta')
     # path('readDepartament/', read_departament_view, name='readDepartament'),
     # path('readCity/', read_city_view, name='readCity'),
     # path('readOffice/', read_office_view, name='readOffice'),

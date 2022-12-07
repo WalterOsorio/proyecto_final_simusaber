@@ -26,4 +26,5 @@ urlpatterns = [
     path('states/', include(('apps.states.urls', 'states'), namespace="states")),
     path('prueba/', include(('apps.prueba.urls', 'locations'), namespace="prueba")),
     path('bancoPregunta/', include(('apps.bancoPregunta.urls', 'locations'), namespace="bancoPregunta")),
+    path('bancoPregunta/', include(('apps.bancoPregunta.urls', 'preguntas'), namespace="bancoPregunta"))
 ]

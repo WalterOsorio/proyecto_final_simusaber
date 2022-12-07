@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import Group, User
 from apps.profiles.models import*
-# from allauth.account.adapter import get_adapter
+from allauth.account.adapter import get_adapter
 from django.contrib.auth import authenticate
 from django.core.files.images import get_image_dimensions
 from apps.profiles.models import*
@@ -30,6 +30,7 @@ class UserForm(forms.ModelForm):
             'last_name',
             'repeat_password',
             'new_password',
+            'rol',
             'is_active'
 
         ]
